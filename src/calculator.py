@@ -18,4 +18,3 @@ def calculate(expression: str):
     result = evaluate_rpn(rpn_tokens)
 
     return result
-print(calculate("1 + 2"))

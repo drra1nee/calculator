@@ -2,8 +2,8 @@
 Основной модуль калькулятора
 """
 
-from .shunting_yard import infix_to_rpn
-from .rpn_evaluator import evaluate_rpn
+from calculator.src.modules.shunting_yard import infix_to_rpn
+from calculator.src.modules.rpn_evaluator import evaluate_rpn
 
 
 def calculate(expression: str):

@@ -2,8 +2,8 @@
 Модуль для преобразования инфиксной записи в обратную польскую нотацию
 """
 
-from .operators import is_operator, is_unary_operator, convert_to_unary, should_pop_operator
-from .tokenizer import get_next_token
+from calculator.src.modules.operators import is_operator, is_unary_operator, convert_to_unary, should_pop_operator
+from calculator.src.modules.tokenizer import get_next_token
 
 
 def infix_to_rpn(expression):

@@ -44,6 +44,18 @@ class TestErrorCases:
         with pytest.raises(ValueError, match="5.0 is not an integer"):
             calculate("5.0 % 2")
 
+    def test_invalid_operator_sequence(self):
+        """Тест двух и более подряд операторов"""
+        with pytest.raises(ValueError, match="Invalid operator sequence"):
+            calculate("5 -+- 2")
+
+    def test_missing_operation(self):
+        """Тест пропуска оператора между скобкой и числом/другой скобкой"""
+        with pytest.raises(ValueError, match="Missing operator"):
+            calculate("(4-2)3")
+        with pytest.raises(ValueError, match="Missing operator"):
+            calculate("(4-2)(3+1)")
+
     def test_division_by_zero(self):
         """Тест деления на ноль"""
         with pytest.raises(ValueError, match="Division by zero"):

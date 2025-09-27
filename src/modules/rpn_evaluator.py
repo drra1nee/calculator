@@ -32,7 +32,7 @@ def evaluate_rpn(rpn_tokens):
         # Обработка унарных операторов
         if is_unary_token(token):
             if not stack:
-                raise ValueError("There are not enough operands for the unary operator")
+                raise ValueError("There are not enough operands for a unary operator")
 
             operand = stack.pop()
 
@@ -96,8 +96,5 @@ def evaluate_rpn(rpn_tokens):
             continue
 
         raise ValueError(f"Unknown token: {token}")
-
-    if len(stack) != 1:
-        raise ValueError("Incorrect expression")
 
     return stack[0]

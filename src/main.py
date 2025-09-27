@@ -8,17 +8,16 @@ from calculator.src.modules.calculator import calculate
 
 def main():
     print("Калькулятор готов к работе!")
-    print("Поддерживаемые операции: +, -, *, /, //, %, **, скобки")
+    print("Поддерживаемые операции: +, -, *, /, //, %, **, ()")
     print("Примеры: 2+3*4, 10//3, (2+3)**2, -5+3")
     print("Введите 'quit' для выхода")
-    print("-" * 50)
 
     while True:
         try:
             expression = input("Введите выражение: ").strip()
 
-            if expression.lower() in ('quit', 'exit', 'q'):
-                print("Выход из программы. До свидания!")
+            if expression.lower() == 'quit':
+                print("Выход из программы.")
                 break
 
             if not expression:
@@ -30,7 +29,7 @@ def main():
         except ValueError as e:
             print(f" Ошибка: {e}")
         except KeyboardInterrupt:
-            print("\nВыход из программы. До свидания!")
+            print("\nВыход из программы.")
             break
         except Exception as e:
             print(f"Неожиданная ошибка: {e}")

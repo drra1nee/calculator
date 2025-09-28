@@ -7,9 +7,7 @@ from calculator.src.modules.operators import is_operator, is_unary_token, is_int
 
 def is_integer(number):
     """Проверяет, является ли число целым и возвращает его как int"""
-    if (number is int(number)
-            and number % 1 == 0
-            and type(number) is int):
+    if number is int(number):
         return int(number)
     else:
         raise ValueError(f"{number} is not an integer")

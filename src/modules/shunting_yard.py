@@ -34,10 +34,8 @@ def infix_to_rpn(expression):
 
         # Определяем, является ли оператор унарным
         is_unary = (is_unary_operator(token) and
-                    (previous_token is None
-                     or previous_token == '('
-                     or is_operator(previous_token)
-                     or is_unary_token(previous_token)))
+                    (previous_token is None or
+                     previous_token == '('))
 
         # Проверка на недопустимые комбинации операторов
         if not validate_operator_sequence(previous_token, token):

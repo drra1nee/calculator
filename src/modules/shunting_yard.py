@@ -19,7 +19,6 @@ def validate_operator_sequence(previous_token, current_token):
 
     return True
 
-
 def infix_to_rpn(expression):
     """Преобразует инфиксное выражение в RPN"""
     output = []
@@ -49,7 +48,7 @@ def infix_to_rpn(expression):
             raise ValueError("Missing operator")
 
         # Если нет знака между скобкой и скобкой
-        if (token == '(' and previous_token == ')'):
+        if token == '(' and previous_token == ')':
             raise ValueError("Missing operator")
 
         # Обработка чисел

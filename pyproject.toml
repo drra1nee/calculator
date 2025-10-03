@@ -8,3 +8,12 @@ dependencies = [
 ]
 [tool.uv.sources]
 calculator = { path = "." }
+
+[tool.mypy]
+python_version = "3.9"
+explicit_package_bases = true
+mypy_path = "src"
+
+[[tool.mypy.overrides]]
+module = "modules.*"
+disallow_untyped_defs = false

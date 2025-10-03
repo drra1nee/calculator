@@ -1,15 +1,10 @@
 [project]
-name = "calculator"
+name = "labs"
 version = "0.1.0"
-
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
-
-[tool.mypy]
-python_version = "3.13"
-namespace_packages = true
-mypy_path = "src"
-
+description = "Add your description here"
+requires-python = ">=3.12"
+dependencies = [
+    "pytest>=8.4.2",
+]
 [tool.uv.sources]
 calculator = { path = "." }

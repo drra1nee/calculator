@@ -2,7 +2,7 @@
 Тесты ошибочных случаев
 """
 
-import pytest # type: ignore
+import pytest
 from calculator.src.modules.calculator import calculate
 
 class TestErrorCases:

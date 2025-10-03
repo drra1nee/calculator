@@ -2,9 +2,8 @@
 Главный модуль калькулятора - точка входа в приложение
 """
 
-from calculator.src.modules.calculator import calculate
 
-
+from modules.calculator import calculate
 
 def main():
     print("Калькулятор готов к работе!")

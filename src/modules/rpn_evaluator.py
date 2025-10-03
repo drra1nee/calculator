@@ -2,7 +2,7 @@
 Модуль для вычисления выражений в обратной польской нотации
 """
 
-from calculator.src.modules.operators import is_operator, is_unary_token, is_integer_division_operator, is_modul_operator
+from .operators import is_operator, is_unary_token, is_integer_division_operator, is_modul_operator
 
 
 def is_integer(number):

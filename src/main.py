@@ -2,8 +2,8 @@
 Главный модуль калькулятора - точка входа в приложение
 """
 
+from  .modules.calculator import calculate
 
-from modules.calculator import calculate
 
 def main():
     print("Калькулятор готов к работе!")
@@ -27,7 +27,7 @@ def main():
             print(f"Результат: {result}")
 
         except ValueError as e:
-            print(f" Ошибка: {e}")
+            print(f"Ошибка: {e}")
         except KeyboardInterrupt:
             print("\nВыход из программы.")
             break

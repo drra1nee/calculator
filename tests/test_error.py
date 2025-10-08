@@ -2,8 +2,9 @@
 Тесты ошибочных случаев
 """
 
-import pytest
-from calculator.src.modules.calculator import calculate
+import pytest # type: ignore
+
+from src.modules.calculator import calculate
 
 class TestErrorCases:
     def test_empty_expression(self):

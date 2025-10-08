@@ -2,7 +2,7 @@
 Тесты выражений
 """
 
-from calculator.src.modules.calculator import calculate
+from src.modules.calculator import calculate
 
 class TestExpressions:
     def test_expression_0(self):
